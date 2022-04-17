@@ -1,7 +1,12 @@
 let nombreUsuario = document.getElementById("nombreU");
 function ingresandoNombre(): void {
-  let nombre = nombreUsuario.value;
-  console.log(nombre);
+  if (nombreUsuario.value===""&&nombreUsuario.lenght>3&&nombreUsuario.lenght<20) {
+    console.log("el campo nombre no debe ser vacio y tiene que tener entre 3 y 20 carácteres")
+  } else {
+    let nombre = nombreUsuario.value;
+    console.log(nombre);
+  }
+  
 }
 
 nombreUsuario?.addEventListener("input", ingresandoNombre);
@@ -9,8 +14,18 @@ nombreUsuario?.addEventListener("input", ingresandoNombre);
 let apellidoUsuario = document.getElementById("apellido");
 
 function ingresandoApellido(): void {
-  let apellido = apellidoUsuario.value;
-  console.log(apellido);
+
+
+  if (apellidoUsuario.value===""&&apellidoUsuario.lenght>3&&apellido.lenght<20) {
+    console.log("el campo apellido no debe ser vacio y tiene que tener entre 3 y 20 carácteres")
+  } else {
+    let apellido = apellidoUsuario.value;
+    console.log(apellido);
+  }
+  
+  
+  
+ 
 }
 
 apellidoUsuario?.addEventListener("input", ingresandoApellido);
