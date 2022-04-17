@@ -1,25 +1,28 @@
+let botonDelFormulario=document.getElementById("enviar");
 let nombreUsuario = document.getElementById("nombreU");
 function ingresandoNombre(): void {
-  if (nombreUsuario.value===""&&nombreUsuario.lenght>3&&nombreUsuario.lenght<20) {
-    console.log("el campo nombre no debe ser vacio y tiene que tener entre 3 y 20 carácteres")
-  } else {
-    let nombre = nombreUsuario.value;
+  let nombre = nombreUsuario.value;
+  if (nombre!=="") {
     console.log(nombre);
+  } else {
+    console.log("el campo nombre no debe ser vacio y tiene que tener entre 3 y 20 carácteres");
+    
   }
   
 }
 
-nombreUsuario?.addEventListener("input", ingresandoNombre);
 
+nombreUsuario?.addEventListener("input", ingresandoNombre);
+botonDelFormulario?.addEventListener("click",ingresandoNombre);
 let apellidoUsuario = document.getElementById("apellido");
 
 function ingresandoApellido(): void {
+  let apellido = apellidoUsuario.value;
 
-
-  if (apellidoUsuario.value===""&&apellidoUsuario.lenght>3&&apellido.lenght<20) {
+  if ((apellido==="")&&(apellido.lenght>3)&&(apellido.lenght<20)) {
     console.log("el campo apellido no debe ser vacio y tiene que tener entre 3 y 20 carácteres")
   } else {
-    let apellido = apellidoUsuario.value;
+   
     console.log(apellido);
   }
   
@@ -48,14 +51,5 @@ function consultaDeUsuario() {
 
 consultaUsuario?.addEventListener("input", consultaDeUsuario);
 
-let formulario = document.getElementById("usuario");
-function enviarFormulario() {
-  let datosDelUsuario = formulario.value;
-  console.log(datosDelUsuario);
-}
-formulario?.addEventListener("form", enviarFormulario);
 
-let botonEnviar = document.getElementById("enviar");
-function enviar(): void {}
 
-botonEnviar?.addEventListener("click", enviar);
