@@ -40,6 +40,11 @@ let emailUsuario = document.getElementById("mail");
 function ingresandoEmail(): void {
   let email = emailUsuario.value;
   console.log(email);
+  let emailU:any[]=[];
+  for (let index = 0; index < emailU.length; index++) {
+    const element = array[index];
+    
+  }
 }
 
 emailUsuario?.addEventListener("input", ingresandoEmail);
