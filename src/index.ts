@@ -2,11 +2,12 @@ let botonDelFormulario=document.getElementById("enviar");
 let nombreUsuario = document.getElementById("nombreU");
 function ingresandoNombre(): void {
   let nombre = nombreUsuario.value;
-  if (nombre!=="") {
-    console.log(nombre);
-  } else {
-    console.log("el campo nombre no debe ser vacio y tiene que tener entre 3 y 20 carácteres");
+  if ((nombre!=="" )&& (nombre.length>=3 && nombre.length<=20)) {
+    console.log("es un nombre válido" + nombre);
     
+  } else {
+    console.log("el campo nombre no debe ser vacio y tiene que tener entre 3 y 20 carácteres"); 
+  
   }
   
 }
@@ -19,11 +20,12 @@ let apellidoUsuario = document.getElementById("apellido");
 function ingresandoApellido(): void {
   let apellido = apellidoUsuario.value;
 
-  if ((apellido==="")&&(apellido.lenght>3)&&(apellido.lenght<20)) {
-    console.log("el campo apellido no debe ser vacio y tiene que tener entre 3 y 20 carácteres")
+  if ((apellido!=="")&& (apellido.length>=3 && apellido.length<=20)) {
+    console.log("es un apellido válido" + apellido);
+    
   } else {
-   
-    console.log(apellido);
+    console.log("el campo apellido no debe ser vacio y tiene que tener entre 3 y 20 carácteres"); 
+  
   }
   
   
